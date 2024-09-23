@@ -1,16 +1,12 @@
 const BankAccount = require('./BankAccount')
-const SavingsAccount =require('./SavingsAccount')
+const SavingsAccount = require('./SavingsAccount')
 
-// Criando instâncias
-const johnAccount = new BankAccount("John");
-const maryAccount = new SavingsAccount("Mary", 1.5);
+const contaCorrente = new BankAccount('John', 1000.00)
+const contaPoupanca = new SavingsAccount('Mary', 1.5, 2000)
 
-// Operações com a conta de John
-johnAccount.deposit(500);
-johnAccount.deposit(1000);
-johnAccount.withdraw(300);
+contaCorrente.deposit(500)
+contaCorrente.withdraw(300)
+console.log('========================================================')
 
-// Operações com a conta de Mary
-maryAccount.deposit(2000);
-maryAccount.applyInterest();
-maryAccount.withdraw(500);
+contaPoupanca.applyInterest()
+contaPoupanca.withdraw(500)
